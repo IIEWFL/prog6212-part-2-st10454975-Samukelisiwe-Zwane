@@ -1,0 +1,17 @@
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\bin\Debug\ClaimManagement.exe.config
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\bin\Debug\ClaimManagement.exe
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\bin\Debug\ClaimManagement.pdb
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement.csproj.AssemblyReference.cache
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\MainWindow.g.cs
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\App.g.cs
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement_MarkupCompile.cache
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement_MarkupCompile.lref
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\MainWindow.baml
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement.g.resources
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement.Properties.Resources.resources
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement.csproj.GenerateResource.cache
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement.csproj.CoreCompileInputs.cache
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement.exe
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimManagement.pdb
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimDetailsWindow.baml
+C:\Users\Samu\Documents\prog6212-part-1-st10454975-Samukelisiwe-Zwane\ClaimManagement\obj\Debug\ClaimDetailsWindow.g.cs
