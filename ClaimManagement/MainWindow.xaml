@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="Claim Management System" Height="650" Width="900">
 
-    <!-- TabControl layout pattern for multi-page WPF applications -->
-    <!-- https://stackoverflow.com/questions/9827492/how-to-create-a-tabcontrol-in-wpf -->
-    <!-- Various community contributors -->
-    <!-- https://stackoverflow.com/users?tab=Users -->
+    <!-- TabControl layout for multi-page app -->
     <Grid>
         <TabControl>
+            <!-- ========================= -->
+            <!-- Tab 1: Submit Claim -->
+            <!-- ========================= -->
             <TabItem Header="Submit Claim">
                 <Grid Margin="20">
                     <Grid.RowDefinitions>
@@ -21,7 +21,9 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Submit New Monthly Claim" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
+                    <TextBlock Text="Submit New Monthly Claim" 
+                               FontWeight="Bold" FontSize="18" 
+                               Grid.Row="0" Margin="0,0,0,15"/>
 
                     <StackPanel Grid.Row="1">
                         <Label Content="Claim Month:" FontWeight="SemiBold"/>
@@ -30,23 +32,34 @@
                         <Label Content="Hours Worked:" FontWeight="SemiBold"/>
                         <TextBox x:Name="HoursWorkedTextBox" Margin="0,5,0,10"/>
 
+                        <Label Content="Hourly Rate:" FontWeight="SemiBold"/>
+                        <TextBox x:Name="HourlyRateTextBox" Margin="0,5,0,10"/>
+
+                        <Label Content="Additional Notes:" FontWeight="SemiBold"/>
+                        <TextBox x:Name="NotesTextBox" Margin="0,5,0,10" Height="60"
+                                 TextWrapping="Wrap" AcceptsReturn="True"/>
+
                         <Label Content="Supporting Documents:" FontWeight="SemiBold"/>
                         <Button Content="Upload File" x:Name="UploadButton" Margin="0,5,0,10"/>
 
                         <ListBox Height="100" Margin="0,5,0,0" BorderBrush="LightGray"/>
                     </StackPanel>
 
-                    <!-- Button styling with colors and horizontal alignment pattern -->
-                    <!-- https://stackoverflow.com/questions/7222149/how-to-set-background-color-of-wpf-button-in-c-sharp-code -->
-                    <!-- Various community contributors -->
-                    <!-- https://stackoverflow.com/users?tab=Users -->
-                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-                        <Button Content="Submit" Width="120" Margin="0,0,10,0" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
-                        <Button Content="Clear Form" Width="120" Background="#F44336" Foreground="White" FontWeight="Bold"/>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" 
+                                HorizontalAlignment="Right" Margin="0,20,0,0">
+                        <Button Content="Submit" Width="120" Margin="0,0,10,0" 
+                                Background="#4CAF50" Foreground="White" FontWeight="Bold" 
+                                Click="SubmitButton_Click"/>
+                        <Button Content="Clear Form" Width="120" 
+                                Background="#F44336" Foreground="White" FontWeight="Bold"
+                                Click="ClearForm_Click"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
 
+            <!-- ========================= -->
+            <!-- Tab 2: View Claims -->
+            <!-- ========================= -->
             <TabItem Header="View Claims">
                 <Grid Margin="20">
                     <Grid.RowDefinitions>
@@ -54,13 +67,11 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Your Submitted Claims" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
+                    <TextBlock Text="Your Submitted Claims" FontWeight="Bold" 
+                               FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
 
-                    <!-- DataGrid with manual column definition pattern -->
-                    <!-- https://stackoverflow.com/questions/5466284/wpf-datagrid-how-to-bind-columns -->
-                    <!-- Various community contributors -->
-                    <!-- https://stackoverflow.com/users?tab=Users -->
-                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" 
+                              IsReadOnly="True" x:Name="ViewClaimsDataGrid">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Claim Month" Width="*"/>
                             <DataGridTextColumn Header="Hours Worked" Width="*"/>
@@ -71,6 +82,9 @@
                 </Grid>
             </TabItem>
 
+            <!-- ========================= -->
+            <!-- Tab 3: Approve Claims -->
+            <!-- ========================= -->
             <TabItem Header="Approve Claims">
                 <Grid Margin="20">
                     <Grid.RowDefinitions>
@@ -78,13 +92,11 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Claims to Approve" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
+                    <TextBlock Text="Claims to Approve" FontWeight="Bold" 
+                               FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
 
-                    <!-- DataGrid with button column pattern for actions -->
-                    <!-- https://stackoverflow.com/questions/9670440/how-to-add-a-button-to-a-datagrid-column -->
-                    <!-- Various community contributors -->
-                    <!-- https://stackoverflow.com/users?tab=Users -->
-                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" x:Name="ClaimsDataGrid">
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" 
+                              IsReadOnly="True" x:Name="ClaimsDataGrid">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Claimant" Width="*"/>
                             <DataGridTextColumn Header="Claim Month" Width="*"/>
@@ -93,7 +105,8 @@
                             <DataGridTemplateColumn Header="Action">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="View Details" Margin="5" Click="ViewDetails_Click"/>
+                                        <Button Content="View Details" Margin="5" 
+                                                Click="ViewDetails_Click"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
