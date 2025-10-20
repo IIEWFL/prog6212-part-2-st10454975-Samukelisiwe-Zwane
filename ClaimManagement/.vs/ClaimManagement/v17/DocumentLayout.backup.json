@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\claimdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claimdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -13,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\claimdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claimdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -39,12 +43,29 @@
           ]
         },
         {
-          "DockedHeight": 851,
-          "SelectedChildIndex": 4,
+          "DockedHeight": 685,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "ClaimDetailsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ClaimDetailsWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml.cs",
+              "RelativeToolTip": "ClaimDetailsWindow.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T22:21:46.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -56,55 +77,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Claim.cs",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Claim.cs",
               "RelativeDocumentMoniker": "Claim.cs",
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Claim.cs",
               "RelativeToolTip": "Claim.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA7wBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T15:47:48.665Z"
+              "WhenOpened": "2025-10-19T15:47:48.665Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-19T15:47:19.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ClaimDetailsWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml",
               "RelativeDocumentMoniker": "ClaimDetailsWindow.xaml",
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml",
               "RelativeToolTip": "ClaimDetailsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-14T16:40:44.54Z"
+              "WhenOpened": "2025-09-14T16:40:44.54Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAQwK8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-14T11:31:02.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-19T15:47:19.032Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 201,
+          "DockedHeight": 367,
           "SelectedChildIndex": -1,
           "Children": [
             {

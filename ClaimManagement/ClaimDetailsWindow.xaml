@@ -16,26 +16,12 @@
             <TextBlock Text="Claim Month: September 2025" Margin="0,5"/>
             <TextBlock Text="Hours Worked: 40" Margin="0,5"/>
             <TextBlock Text="Status: Pending" Margin="0,5" FontWeight="SemiBold"/>
-
-            <Label Content="Attached Documents:" Margin="0,15,0,0"/>
-            <ListBox Height="100" Margin="0,5,0,10">
-                <ListBoxItem Content="Invoice.pdf"/>
-                <ListBoxItem Content="Timesheet.jpg"/>
-            </ListBox>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-            <Button Content="Approve" Width="120" Margin="0,0,10,0" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
-            <Button Content="Reject" Width="120" Background="#F44336" Foreground="White" FontWeight="Bold"/>
-            <Button Content="Close" Width="120" Margin="10,0,0,0"/>
+            <Button Content="Approve" Width="120" Margin="0,0,10,0" Background="#4CAF50" Foreground="White" FontWeight="Bold" Click="ApproveButton_Click"/>
+            <Button Content="Reject" Width="120" Background="#F44336" Foreground="White" FontWeight="Bold" Click="RejectButton_Click"/>
+            <Button Content="Close" Width="120" Margin="10,0,0,0" Click="CloseButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
-
-
-<!-- ListBox with static items pattern for displaying file lists -->
-<!-- https://stackoverflow.com/questions/2908886/how-to-add-items-to-a-listbox-in-wpf -->
-<!-- Various community contributors -->
-<!-- https://stackoverflow.com/users?tab=Users -->
-    
-   

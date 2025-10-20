@@ -1,23 +1,21 @@
 ﻿<Window x:Class="ClaimManagement.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Claim Management System" Height="650" Width="900" Background="#F5F5F5">
-
-    <Grid Margin="20">
-        <TabControl x:Name="MainTabs">
-
+        Title="Claim Management System" Height="650" Width="900">
+    <Grid>
+        <TabControl>
             <!-- Submit Claim Tab -->
             <TabItem Header="Submit Claim">
                 <Grid Margin="20">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Submit a New Claim" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+                    <TextBlock Text="Submit New Monthly Claim" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
 
                     <StackPanel Grid.Row="1">
-
                         <Label Content="Claim Month:" FontWeight="SemiBold"/>
                         <DatePicker x:Name="ClaimMonthPicker" Margin="0,5,0,10"/>
 
@@ -31,23 +29,74 @@
                         <TextBox x:Name="NotesTextBox" Margin="0,5,0,10" Height="60" TextWrapping="Wrap" AcceptsReturn="True"/>
 
                         <Label Content="Supporting Documents:" FontWeight="SemiBold"/>
-                        <Button x:Name="UploadButton" Content="Upload File" Click="UploadButton_Click"
-                                Width="150" Margin="0,5,0,10" Background="#2196F3" Foreground="White" FontWeight="Bold"/>
+                        <Button x:Name="UploadButton" Content="Upload File" Margin="0,5,0,10" Click="UploadButton_Click"/>
 
-                        <ListBox x:Name="UploadedFilesList" Height="100" Margin="0,5,0,10" BorderBrush="LightGray"/>
+                        <ListBox x:Name="UploadedFilesList" Height="100" Margin="0,5,0,0" BorderBrush="LightGray"/>
+                    </StackPanel>
 
-                        <StackPanel Orientation="Horizontal">
-                            <Button Content="Submit" Width="120" Margin="0,0,10,0" Background="#4CAF50" 
-                                    Foreground="White" FontWeight="Bold" Click="SubmitButton_Click"/>
-                            <Button Content="Clear" Width="120" Background="#F44336" 
-                                    Foreground="White" FontWeight="Bold" Click="ClearButton_Click"/>
-                        </StackPanel>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                        <Button Content="Submit" Width="120" Margin="0,0,10,0" Background="#4CAF50" Foreground="White" FontWeight="Bold" Click="SubmitButton_Click"/>
+                        <Button Content="Clear Form" Width="120" Background="#F44336" Foreground="White" FontWeight="Bold" Click="ClearForm_Click"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
 
-            <!-- Other Tabs (like CoordinatorView) go here -->
+            <!-- View Claims Tab (lecturer) -->
+            <TabItem Header="View Claims">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
+                    <TextBlock Text="Your Submitted Claims" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
+
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" x:Name="ViewClaimsDataGrid">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Claim Month" Binding="{Binding ClaimMonth}" Width="*"/>
+                            <DataGridTextColumn Header="Hours Worked" Binding="{Binding HoursWorked}" Width="*"/>
+                            <DataGridTextColumn Header="Submission Date" Binding="{Binding SubmissionDate}" Width="*"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                            <DataGridTextColumn Header="Amount" Binding="{Binding CalculatedAmount}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <!-- Approve Claims Tab (coordinators/managers) -->
+            <TabItem Header="Approve Claims">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Claims to Approve" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
+
+                    <!-- IMPORTANT: x:Name must match code-behind -->
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" x:Name="ClaimsDataGrid" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Claim ID" Binding="{Binding ClaimID}" Width="*"/>
+                            <DataGridTextColumn Header="Lecturer ID" Binding="{Binding ContractorID}" Width="*"/>
+                            <DataGridTextColumn Header="Claim Month" Binding="{Binding ClaimMonth}" Width="*"/>
+                            <DataGridTextColumn Header="Hours Worked" Binding="{Binding HoursWorked}" Width="*"/>
+                            <DataGridTextColumn Header="Amount" Binding="{Binding CalculatedAmount}" Width="*"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                            <DataGridTemplateColumn Header="Actions">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button Content="Approve" Margin="2" Padding="5,2" Click="ApproveClaim_Click"/>
+                                            <Button Content="Reject" Margin="2" Padding="5,2" Click="RejectClaim_Click"/>
+                                            <Button Content="View Details" Margin="2" Padding="5,2" Click="ViewDetails_Click"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
