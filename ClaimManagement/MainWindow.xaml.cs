@@ -1,111 +1,88 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Windows;
 
 namespace ClaimManagement
 {
     public partial class MainWindow : Window
     {
-        // store all claims
-        private static List<Claim> claimsList = new List<Claim>();
+        private List<string> uploadedFiles = new List<string>();
 
         public MainWindow()
         {
             InitializeComponent();
-            RefreshDataGrids();
         }
 
-        // ==============================
-        //  SUBMIT CLAIM
-        // ==============================
+        private void UploadButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Supported Files|*.pdf;*.docx;*.xlsx",
+                Multiselect = false
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                FileInfo fileInfo = new FileInfo(openFileDialog.FileName);
+
+                // File size limit: 5 MB
+                if (fileInfo.Length > 5 * 1024 * 1024)
+                {
+                    MessageBox.Show("File size exceeds 5 MB limit.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+                // Create folder for uploads if it doesn’t exist
+                string uploadFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "UploadedFiles");
+                if (!Directory.Exists(uploadFolder))
+                    Directory.CreateDirectory(uploadFolder);
+
+                // Copy file to upload folder
+                string destinationPath = Path.Combine(uploadFolder, fileInfo.Name);
+                File.Copy(fileInfo.FullName, destinationPath, true);
+
+                // Add to list
+                uploadedFiles.Add(fileInfo.Name);
+                UploadedFilesList.Items.Add(fileInfo.Name);
+
+                MessageBox.Show("File uploaded successfully.", "Upload Complete", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(HoursWorkedTextBox.Text) ||
                 string.IsNullOrWhiteSpace(HourlyRateTextBox.Text))
             {
-                MessageBox.Show("Please fill in all required fields.", "Missing Info",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please fill in all required fields.", "Missing Info", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            try
-            {
-                Claim newClaim = new Claim
-                {
-                    ClaimID = new Random().Next(1000, 9999),
-                    ContractorID = 1,  // example lecturer
-                    ContractID = 1,
-                    ClaimMonth = ClaimMonthPicker.SelectedDate ?? DateTime.Now,
-                    HoursWorked = decimal.Parse(HoursWorkedTextBox.Text),
-                    SubmissionDate = DateTime.Now,
-                    Status = "Pending",
-                    CalculatedAmount = decimal.Parse(HoursWorkedTextBox.Text) * decimal.Parse(HourlyRateTextBox.Text),
-                    Comments = NotesTextBox.Text
-                };
+            decimal hours = decimal.Parse(HoursWorkedTextBox.Text);
+            decimal rate = decimal.Parse(HourlyRateTextBox.Text);
+            decimal total = hours * rate;
 
-                claimsList.Add(newClaim);
-                MessageBox.Show($"Claim submitted successfully!\nTotal: R{newClaim.CalculatedAmount}",
-                    "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show($"Claim submitted successfully!\nTotal Amount: R{total}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                ClearForm();
-                RefreshDataGrids();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error submitting claim: {ex.Message}", "Error",
-                    MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            // Clear fields after submission
+            ClaimMonthPicker.SelectedDate = null;
+            HoursWorkedTextBox.Clear();
+            HourlyRateTextBox.Clear();
+            NotesTextBox.Clear();
+            UploadedFilesList.Items.Clear();
+            uploadedFiles.Clear();
         }
 
-        private void ClearForm_Click(object sender, RoutedEventArgs e)
-        {
-            ClearForm();
-        }
-
-        private void ClearForm()
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
             ClaimMonthPicker.SelectedDate = null;
             HoursWorkedTextBox.Clear();
             HourlyRateTextBox.Clear();
             NotesTextBox.Clear();
-        }
-
-        // ==============================
-        //  APPROVE OR REJECT CLAIMS
-        // ==============================
-        private void ApproveClaim_Click(object sender, RoutedEventArgs e)
-        {
-            if (PendingClaimsGrid.SelectedItem is Claim selectedClaim)
-            {
-                selectedClaim.Status = "Approved";
-                MessageBox.Show($"Claim #{selectedClaim.ClaimID} approved successfully!",
-                    "Approved", MessageBoxButton.OK, MessageBoxImage.Information);
-                RefreshDataGrids();
-            }
-        }
-
-        private void RejectClaim_Click(object sender, RoutedEventArgs e)
-        {
-            if (PendingClaimsGrid.SelectedItem is Claim selectedClaim)
-            {
-                selectedClaim.Status = "Rejected";
-                MessageBox.Show($"Claim #{selectedClaim.ClaimID} has been rejected.",
-                    "Rejected", MessageBoxButton.OK, MessageBoxImage.Warning);
-                RefreshDataGrids();
-            }
-        }
-
-        // ==============================
-        //  REFRESH GRIDS
-        // ==============================
-        private void RefreshDataGrids()
-        {
-            ViewClaimsDataGrid.ItemsSource = null;
-            ViewClaimsDataGrid.ItemsSource = claimsList;
-
-            PendingClaimsGrid.ItemsSource = null;
-            PendingClaimsGrid.ItemsSource = claimsList.Where(c => c.Status == "Pending").ToList();
+            UploadedFilesList.Items.Clear();
+            uploadedFiles.Clear();
         }
     }
 }
