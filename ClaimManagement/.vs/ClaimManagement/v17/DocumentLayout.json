@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\claimdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\claimdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claimdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -40,8 +40,12 @@
         },
         {
           "DockedHeight": 851,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -64,8 +68,7 @@
               "RelativeToolTip": "Claim.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAA7wBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T15:47:48.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T15:47:48.665Z"
             },
             {
               "$type": "Document",
@@ -76,8 +79,7 @@
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-19T15:47:19.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T15:47:19.032Z"
             },
             {
               "$type": "Document",
@@ -88,8 +90,7 @@
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml",
               "RelativeToolTip": "ClaimDetailsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-14T16:40:44.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T16:40:44.54Z"
             },
             {
               "$type": "Document",
@@ -99,7 +100,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAA4wEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAiwG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-14T11:31:02.721Z",
               "EditorCaption": ""

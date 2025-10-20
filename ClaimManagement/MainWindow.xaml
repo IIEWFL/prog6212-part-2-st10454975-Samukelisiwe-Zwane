@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="Claim Management System" Height="650" Width="900">
 
-    <!-- TabControl layout for multi-page app -->
     <Grid>
         <TabControl>
             <!-- ========================= -->
@@ -21,8 +20,8 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Submit New Monthly Claim" 
-                               FontWeight="Bold" FontSize="18" 
+                    <TextBlock Text="Submit New Monthly Claim"
+                               FontWeight="Bold" FontSize="18"
                                Grid.Row="0" Margin="0,0,0,15"/>
 
                     <StackPanel Grid.Row="1">
@@ -45,12 +44,12 @@
                         <ListBox Height="100" Margin="0,5,0,0" BorderBrush="LightGray"/>
                     </StackPanel>
 
-                    <StackPanel Grid.Row="2" Orientation="Horizontal" 
+                    <StackPanel Grid.Row="2" Orientation="Horizontal"
                                 HorizontalAlignment="Right" Margin="0,20,0,0">
-                        <Button Content="Submit" Width="120" Margin="0,0,10,0" 
-                                Background="#4CAF50" Foreground="White" FontWeight="Bold" 
+                        <Button Content="Submit" Width="120" Margin="0,0,10,0"
+                                Background="#4CAF50" Foreground="White" FontWeight="Bold"
                                 Click="SubmitButton_Click"/>
-                        <Button Content="Clear Form" Width="120" 
+                        <Button Content="Clear Form" Width="120"
                                 Background="#F44336" Foreground="White" FontWeight="Bold"
                                 Click="ClearForm_Click"/>
                     </StackPanel>
@@ -67,16 +66,17 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Your Submitted Claims" FontWeight="Bold" 
+                    <TextBlock Text="Your Submitted Claims" FontWeight="Bold"
                                FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
 
-                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" 
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False"
                               IsReadOnly="True" x:Name="ViewClaimsDataGrid">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Claim Month" Width="*"/>
-                            <DataGridTextColumn Header="Hours Worked" Width="*"/>
-                            <DataGridTextColumn Header="Submission Date" Width="*"/>
-                            <DataGridTextColumn Header="Status" Width="*"/>
+                            <DataGridTextColumn Header="Claim Month" Binding="{Binding ClaimMonth}" Width="*"/>
+                            <DataGridTextColumn Header="Hours Worked" Binding="{Binding HoursWorked}" Width="*"/>
+                            <DataGridTextColumn Header="Submission Date" Binding="{Binding SubmissionDate}" Width="*"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                            <DataGridTextColumn Header="Amount" Binding="{Binding CalculatedAmount}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -92,21 +92,31 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="Claims to Approve" FontWeight="Bold" 
+                    <TextBlock Text="Claims to Approve" FontWeight="Bold"
                                FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
 
-                    <DataGrid Grid.Row="1" AutoGenerateColumns="False" 
-                              IsReadOnly="True" x:Name="ClaimsDataGrid">
+                    <DataGrid Grid.Row="1" AutoGenerateColumns="False"
+                              x:Name="PendingClaimsGrid"
+                              IsReadOnly="True"
+                              ItemsSource="{Binding PendingClaims}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Claimant" Width="*"/>
-                            <DataGridTextColumn Header="Claim Month" Width="*"/>
-                            <DataGridTextColumn Header="Hours" Width="*"/>
-                            <DataGridTextColumn Header="Status" Width="*"/>
-                            <DataGridTemplateColumn Header="Action">
+                            <DataGridTextColumn Header="Claim ID" Binding="{Binding ClaimID}" Width="*"/>
+                            <DataGridTextColumn Header="Lecturer ID" Binding="{Binding ContractorID}" Width="*"/>
+                            <DataGridTextColumn Header="Claim Month" Binding="{Binding ClaimMonth}" Width="*"/>
+                            <DataGridTextColumn Header="Hours Worked" Binding="{Binding HoursWorked}" Width="*"/>
+                            <DataGridTextColumn Header="Amount" Binding="{Binding CalculatedAmount}" Width="*"/>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                            <DataGridTemplateColumn Header="Actions">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="View Details" Margin="5" 
-                                                Click="ViewDetails_Click"/>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button Content="Approve" Background="#4CAF50" Foreground="White"
+                                                    Margin="2" Padding="5,2"
+                                                    Click="ApproveClaim_Click"/>
+                                            <Button Content="Reject" Background="#F44336" Foreground="White"
+                                                    Margin="2" Padding="5,2"
+                                                    Click="RejectClaim_Click"/>
+                                        </StackPanel>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>

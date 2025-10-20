@@ -1,19 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 
 namespace ClaimManagement
 {
     public partial class MainWindow : Window
     {
+        // store all claims
+        private static List<Claim> claimsList = new List<Claim>();
+
         public MainWindow()
         {
             InitializeComponent();
+            RefreshDataGrids();
         }
 
-        // SUBMIT button logic
+        // ==============================
+        //  SUBMIT CLAIM
+        // ==============================
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
-            // basic validation
             if (string.IsNullOrWhiteSpace(HoursWorkedTextBox.Text) ||
                 string.IsNullOrWhiteSpace(HourlyRateTextBox.Text))
             {
@@ -24,11 +31,10 @@ namespace ClaimManagement
 
             try
             {
-                // create a new Claim object
                 Claim newClaim = new Claim
                 {
                     ClaimID = new Random().Next(1000, 9999),
-                    ContractorID = 1,  // placeholder for lecturer
+                    ContractorID = 1,  // example lecturer
                     ContractID = 1,
                     ClaimMonth = ClaimMonthPicker.SelectedDate ?? DateTime.Now,
                     HoursWorked = decimal.Parse(HoursWorkedTextBox.Text),
@@ -38,12 +44,12 @@ namespace ClaimManagement
                     Comments = NotesTextBox.Text
                 };
 
-                // show success message
+                claimsList.Add(newClaim);
                 MessageBox.Show($"Claim submitted successfully!\nTotal: R{newClaim.CalculatedAmount}",
                     "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // clear form
                 ClearForm();
+                RefreshDataGrids();
             }
             catch (Exception ex)
             {
@@ -52,13 +58,11 @@ namespace ClaimManagement
             }
         }
 
-        // CLEAR FORM button logic
         private void ClearForm_Click(object sender, RoutedEventArgs e)
         {
             ClearForm();
         }
 
-        // helper method to clear all fields
         private void ClearForm()
         {
             ClaimMonthPicker.SelectedDate = null;
@@ -67,10 +71,41 @@ namespace ClaimManagement
             NotesTextBox.Clear();
         }
 
-        // temporary placeholder for Approve Claims tab
-        private void ViewDetails_Click(object sender, RoutedEventArgs e)
+        // ==============================
+        //  APPROVE OR REJECT CLAIMS
+        // ==============================
+        private void ApproveClaim_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Details view coming soon!");
+            if (PendingClaimsGrid.SelectedItem is Claim selectedClaim)
+            {
+                selectedClaim.Status = "Approved";
+                MessageBox.Show($"Claim #{selectedClaim.ClaimID} approved successfully!",
+                    "Approved", MessageBoxButton.OK, MessageBoxImage.Information);
+                RefreshDataGrids();
+            }
+        }
+
+        private void RejectClaim_Click(object sender, RoutedEventArgs e)
+        {
+            if (PendingClaimsGrid.SelectedItem is Claim selectedClaim)
+            {
+                selectedClaim.Status = "Rejected";
+                MessageBox.Show($"Claim #{selectedClaim.ClaimID} has been rejected.",
+                    "Rejected", MessageBoxButton.OK, MessageBoxImage.Warning);
+                RefreshDataGrids();
+            }
+        }
+
+        // ==============================
+        //  REFRESH GRIDS
+        // ==============================
+        private void RefreshDataGrids()
+        {
+            ViewClaimsDataGrid.ItemsSource = null;
+            ViewClaimsDataGrid.ItemsSource = claimsList;
+
+            PendingClaimsGrid.ItemsSource = null;
+            PendingClaimsGrid.ItemsSource = claimsList.Where(c => c.Status == "Pending").ToList();
         }
     }
 }
