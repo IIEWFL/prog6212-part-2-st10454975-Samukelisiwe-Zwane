@@ -20,9 +20,9 @@ namespace ClaimManagement
             InitializeComponent();
 
             // sample data to test the DataGrid UI
-            ClaimsList.Add(new Claim { ClaimID = 1, ContractorID = 101, ClaimMonth = DateTime.Now.AddMonths(-1), HoursWorked = 40, SubmissionDate = DateTime.Now.AddDays(-7), Status = "Pending", CalculatedAmount = 40m * 200m });
-            ClaimsList.Add(new Claim { ClaimID = 2, ContractorID = 102, ClaimMonth = DateTime.Now.AddMonths(-2), HoursWorked = 35, SubmissionDate = DateTime.Now.AddDays(-10), Status = "Approved", CalculatedAmount = 35m * 200m });
-            ClaimsList.Add(new Claim { ClaimID = 3, ContractorID = 103, ClaimMonth = DateTime.Now.AddMonths(-1), HoursWorked = 45, SubmissionDate = DateTime.Now.AddDays(-5), Status = "Rejected", CalculatedAmount = 45m * 200m });
+            ClaimsList.Add(new Claim { ClaimID = 1, Lecturer = "John Doe", ContractorID = 101, ClaimMonth = DateTime.Now.AddMonths(-1), HoursWorked = 40, SubmissionDate = DateTime.Now.AddDays(-7), Status = "Pending", CalculatedAmount = 40m * 200m });
+            ClaimsList.Add(new Claim { ClaimID = 2, Lecturer = "Jane Smith", ContractorID = 102, ClaimMonth = DateTime.Now.AddMonths(-2), HoursWorked = 35, SubmissionDate = DateTime.Now.AddDays(-10), Status = "Approved", CalculatedAmount = 35m * 200m });
+            ClaimsList.Add(new Claim { ClaimID = 3, Lecturer = "Bob Johnson", ContractorID = 103, ClaimMonth = DateTime.Now.AddMonths(-1), HoursWorked = 45, SubmissionDate = DateTime.Now.AddDays(-5), Status = "Rejected", CalculatedAmount = 45m * 200m });
 
             // bind collections to the grids / listbox
             ClaimsDataGrid.ItemsSource = ClaimsList;
@@ -30,7 +30,7 @@ namespace ClaimManagement
             UploadedFilesList.ItemsSource = uploadedFiles;
         }
 
-   
+
         public void UpdateClaimStatus(int claimID, string newStatus)
         {
             var claim = ClaimsList.FirstOrDefault(c => c.ClaimID == claimID);
@@ -41,7 +41,7 @@ namespace ClaimManagement
             }
         }
 
-      
+
         private void UploadButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog
@@ -75,6 +75,12 @@ namespace ClaimManagement
         // Submit claim - creates new Claim and adds to list
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(ClaimantNameTextBox.Text))
+            {
+                MessageBox.Show("Please enter the claimant name.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             if (string.IsNullOrWhiteSpace(HoursWorkedTextBox.Text) || string.IsNullOrWhiteSpace(HourlyRateTextBox.Text))
             {
                 MessageBox.Show("Please fill required fields.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -90,6 +96,7 @@ namespace ClaimManagement
             var newClaim = new Claim
             {
                 ClaimID = GenerateNewClaimID(),
+                Lecturer = ClaimantNameTextBox.Text,
                 ContractorID = 1, // placeholder
                 ContractID = 1,
                 ClaimMonth = ClaimMonthPicker.SelectedDate ?? DateTime.Now,
@@ -119,6 +126,7 @@ namespace ClaimManagement
 
         private void ClearForm()
         {
+            ClaimantNameTextBox.Clear();
             ClaimMonthPicker.SelectedDate = null;
             HoursWorkedTextBox.Clear();
             HourlyRateTextBox.Clear();
@@ -155,7 +163,7 @@ namespace ClaimManagement
             var claim = (sender as FrameworkElement)?.DataContext as Claim;
             if (claim == null) return;
 
-            
+
             ClaimDetailsWindow detailsWindow = new ClaimDetailsWindow(claim, this);
             detailsWindow.Owner = this;
             detailsWindow.ShowDialog();
@@ -202,5 +210,4 @@ namespace ClaimManagement
 // Profile: https://stackoverflow.com/users/1560275/mm8
 //also consulted ai for implementation ideas
 //openai
-// https://openai.com/ 
-
+// https://openai.com/

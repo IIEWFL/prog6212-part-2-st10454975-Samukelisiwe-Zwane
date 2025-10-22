@@ -16,6 +16,9 @@
                     <TextBlock Text="Submit New Monthly Claim" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
 
                     <StackPanel Grid.Row="1">
+                        <Label Content="Claimant Name:" FontWeight="SemiBold"/>
+                        <TextBox x:Name="ClaimantNameTextBox" Margin="0,5,0,10"/>
+
                         <Label Content="Claim Month:" FontWeight="SemiBold"/>
                         <DatePicker x:Name="ClaimMonthPicker" Margin="0,5,0,10"/>
 

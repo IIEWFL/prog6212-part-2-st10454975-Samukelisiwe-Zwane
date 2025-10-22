@@ -8,16 +8,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
         <TextBlock Text="Claim Details" FontWeight="Bold" FontSize="18" Grid.Row="0" Margin="0,0,0,15"/>
-
         <StackPanel Grid.Row="1">
-            <TextBlock Text="Claimant: John Doe" Margin="0,5"/>
-            <TextBlock Text="Claim Month: September 2025" Margin="0,5"/>
-            <TextBlock Text="Hours Worked: 40" Margin="0,5"/>
-            <TextBlock Text="Status: Pending" Margin="0,5" FontWeight="SemiBold"/>
+            <TextBlock x:Name="ClaimantTextBlock" Margin="0,5"/>
+            <TextBlock x:Name="ClaimMonthTextBlock" Margin="0,5"/>
+            <TextBlock x:Name="HoursWorkedTextBlock" Margin="0,5"/>
+            <TextBlock x:Name="StatusTextBlock" Margin="0,5" FontWeight="SemiBold"/>
         </StackPanel>
-
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
             <Button Content="Approve" Width="120" Margin="0,0,10,0" Background="#4CAF50" Foreground="White" FontWeight="Bold" Click="ApproveButton_Click"/>
             <Button Content="Reject" Width="120" Background="#F44336" Foreground="White" FontWeight="Bold" Click="RejectButton_Click"/>
@@ -25,5 +22,3 @@
         </StackPanel>
     </Grid>
 </Window>
-
-    
