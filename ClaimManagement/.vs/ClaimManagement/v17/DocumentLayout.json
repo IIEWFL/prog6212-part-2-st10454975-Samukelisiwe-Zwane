@@ -3,15 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\claimmanagementtests\\claimtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claimmanagementtests\\claimtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:models\\claim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|c:\\users\\samu\\documents\\prog6212-part-2-st10454975-samukelisiwe-zwane\\claimmanagement\\claimdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\claimdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{55217A0B-D128-4836-AD7E-1E4069D79CB7}|ClaimManagement.csproj|solutionrelative:claimdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -44,19 +52,19 @@
         },
         {
           "DockedHeight": 685,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClaimDetailsWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ClaimDetailsWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml.cs",
-              "RelativeToolTip": "ClaimDetailsWindow.xaml.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-20T22:21:46.157Z",
+              "WhenOpened": "2025-10-21T17:35:39.153Z",
               "EditorCaption": ""
             },
             {
@@ -65,44 +73,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "ClaimTest.cs",
+              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimManagementTests\\ClaimTest.cs",
+              "RelativeDocumentMoniker": "ClaimManagementTests\\ClaimTest.cs",
+              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimManagementTests\\ClaimTest.cs*",
+              "RelativeToolTip": "ClaimManagementTests\\ClaimTest.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T17:29:29.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClaimDetailsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ClaimDetailsWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml.cs",
+              "RelativeToolTip": "ClaimDetailsWindow.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T22:21:46.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-19T16:53:19.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T16:53:19.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Claim.cs",
-              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Claim.cs",
-              "RelativeDocumentMoniker": "Claim.cs",
-              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Claim.cs",
-              "RelativeToolTip": "Claim.cs",
+              "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Models\\Claim.cs",
+              "RelativeDocumentMoniker": "Models\\Claim.cs",
+              "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\Models\\Claim.cs",
+              "RelativeToolTip": "Models\\Claim.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T15:47:48.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T15:47:48.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ClaimDetailsWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml",
               "RelativeDocumentMoniker": "ClaimDetailsWindow.xaml",
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\ClaimDetailsWindow.xaml",
               "RelativeToolTip": "ClaimDetailsWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-14T16:40:44.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T16:40:44.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -110,20 +140,18 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAJ8AAAAAAAAAAAAQwK8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T11:31:02.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T11:31:02.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
               "ToolTip": "C:\\Users\\Samu\\Documents\\prog6212-part-2-st10454975-Samukelisiwe-Zwane\\ClaimManagement\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-10-19T15:47:19.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T15:47:19.032Z"
             }
           ]
         },

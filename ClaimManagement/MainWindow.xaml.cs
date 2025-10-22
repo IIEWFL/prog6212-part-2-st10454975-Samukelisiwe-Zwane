@@ -30,10 +30,7 @@ namespace ClaimManagement
             UploadedFilesList.ItemsSource = uploadedFiles;
         }
 
-        // -------------------------
-        // PUBLIC API used by other windows
-        // -------------------------
-        // Make this public so ClaimDetailsWindow (or other windows) can call it
+   
         public void UpdateClaimStatus(int claimID, string newStatus)
         {
             var claim = ClaimsList.FirstOrDefault(c => c.ClaimID == claimID);
@@ -44,9 +41,7 @@ namespace ClaimManagement
             }
         }
 
-        // -------------------------
-        // Upload file button - stores file locally and displays filename
-        // -------------------------
+      
         private void UploadButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog
@@ -131,7 +126,7 @@ namespace ClaimManagement
             uploadedFiles.Clear();
         }
 
-        // Approve selected claim (row button click)
+        // Approve selected claim 
         private void ApproveClaim_Click(object sender, RoutedEventArgs e)
         {
             // get the claim associated with the clicked row
@@ -143,7 +138,7 @@ namespace ClaimManagement
             RefreshGrids();
         }
 
-        // Reject selected claim (row button click)
+        // Reject selected claim 
         private void RejectClaim_Click(object sender, RoutedEventArgs e)
         {
             var claim = (sender as FrameworkElement)?.DataContext as Claim;
@@ -154,13 +149,13 @@ namespace ClaimManagement
             RefreshGrids();
         }
 
-        // View details - opens a details window (uses DataContext from row)
+        // View details - opens a details window 
         private void ViewDetails_Click(object sender, RoutedEventArgs e)
         {
             var claim = (sender as FrameworkElement)?.DataContext as Claim;
             if (claim == null) return;
 
-            // open details window and pass 'this' so details window can call back
+            
             ClaimDetailsWindow detailsWindow = new ClaimDetailsWindow(claim, this);
             detailsWindow.Owner = this;
             detailsWindow.ShowDialog();
@@ -173,3 +168,39 @@ namespace ClaimManagement
         }
     }
 }
+
+// CODE ATTRIBUTIONS:
+// I got this code structure and ideas from Stack Overflow
+// Link to website:https://stackoverflow.com/questions/11624298/how-do-i-use-openfiledialog-to-select-a-folder
+// Author name: LarsTech
+// Profile: https://stackoverflow.com/users/719186/larstech
+
+// I got this code structure and ideas from Stack Overflow
+// Link to website:https://stackoverflow.com/questions/10659347/bind-an-observablecollection-to-a-listview
+// Author name: bryan walker
+// Profile: https://stackoverflow.com/users/685140/bryan-walker
+
+// I got this code structure and ideas from Stack Overflow
+// Link to website: https://stackoverflow.com/questions/40400600/how-can-i-reference-the-listview-datacontext-from-within-the-listview-itemtempla
+// Author name: lup silviu
+// Profile: https://stackoverflow.com/users/658394/lupu-silviu
+
+
+// I got this code structure and ideas from Stack Overflow
+// Link to website: https://stackoverflow.com/questions/35686577/how-to-refresh-a-datagrid-in-wpf-after-updating-the-data-source
+// Author name: mm8
+// Profile: https://stackoverflow.com/users/1560275/mm8
+
+// I got this code structure and ideas from Stack Overflow
+// Link to website: https://stackoverflow.com/questions/2227380/openfiledialog-to-select-a-file-and-also-show-a-preview-of-the-file-in-winforms
+// Author name: LarsTech
+// Profile: https://stackoverflow.com/users/719186/larstech
+
+// I got this code structure and ideas from Stack Overflow
+// Link to website: https://stackoverflow.com/questions/11324688/how-to-refresh-datagrid-in-wpf
+// Author name: mm8
+// Profile: https://stackoverflow.com/users/1560275/mm8
+//also consulted ai for implementation ideas
+//openai
+// https://openai.com/ 
+

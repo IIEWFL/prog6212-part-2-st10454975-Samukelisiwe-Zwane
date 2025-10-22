@@ -15,20 +15,12 @@ namespace ClaimManagement
             _claim = claim ?? throw new ArgumentNullException(nameof(claim));
             _mainWindow = mainWindow ?? throw new ArgumentNullException(nameof(mainWindow));
 
-            // load claim details to UI elements (if you have named controls, set their .Text/.Content here)
             LoadClaimDetails();
         }
 
         private void LoadClaimDetails()
         {
-            // If your XAML has TextBlocks or Labels with names, set them here.
-            // Example (uncomment if you have those controls):
-            // ClaimIdTextBlock.Text = _claim.ClaimID.ToString();
-            // ClaimMonthTextBlock.Text = _claim.ClaimMonth.ToString("yyyy-MM");
-            // HoursTextBlock.Text = _claim.HoursWorked.ToString();
-            // StatusTextBlock.Text = _claim.Status;
-
-            // For now, if no named UI elements, just set window title
+            
             this.Title = $"Claim Details - ID {_claim.ClaimID} ({_claim.Status})";
         }
 
@@ -53,3 +45,32 @@ namespace ClaimManagement
         }
     }
 }
+
+
+//Code attribution for window
+// Ireferenced Microsoft Learn for window interaction examples
+// https://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studio
+// Author: Microsoft Documentation Team
+// https://learn.microsoft.com/en-us/users/
+
+// The message box implementation idea was adapted from C# Corner
+// https://www.c-sharpcorner.com/UploadFile/mahesh/messagebox-in-wpf/
+// Author: Mahesh Chand
+// https://www.c-sharpcorner.com/members/mahesh-chand
+
+// CODE ATTRIBUTIONS:
+// I got this code structure and ideas from Stack Overflow
+// Link to website: https://stackoverflow.com/questions/30063550/how-should-i-pass-data-between-wpf-windows-involving-mainwindow-c
+// Author name: minkus
+// Profile: https://https://stackoverflow.com/users/12872270/minkus
+
+// I got this code structure and ideas from Stack Overflow  
+// Link to website: https://stackoverflow.com/questions/16172462/close-window-from-viewmodel
+// Author name: wpfnoob
+// Profile: https://stackoverflow.com/users/1990445/wpfnoob
+
+
+// I got this code structure and ideas from Stack Overflow
+// Link to website: https://stackoverflow.com/questions/368742/throwing-argumentnullexception
+// Author name: tvfosson
+// Profile: https://stackoverflow.com/users/12950/tvanfosson
